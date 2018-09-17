@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="KUHybridQuizApp.Contact">
+	<StackLayout VerticalOptions="CenterAndExpand" HorizontalOptions="Center" Spacing="10" BackgroundColor="#dde5ed">
+        <Label Text="Technical Support" FontSize="22" Margin="15,15,15,0" />
+        <Label Text="Nazma Sulthana " Margin="15,0,15,0"/>
+        <Label Text="1005D Eaton Hall, University of Kansas" Margin="15,0,15,0" />
+        <Label Text="Lawrence, Kansas" Margin="15,0,15,0"/>
+        <StackLayout HorizontalOptions="CenterAndExpand" Orientation="Horizontal">
+            <Button Text="Call" Clicked="MakeCall" Margin="15,0,15,5"/>
+            <Button Text="Email" Clicked="MakeEmail" Margin="15,0,15,5" />
+        </StackLayout>
+        <BoxView BackgroundColor="Transparent" Margin="0,0,0,0"></BoxView>
+        <Label Text="This application is hosted on GitHub" Margin="15,5,15,15" />
+    </StackLayout>
+</ContentPage>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:local="clr-namespace:KUHybridQuizApp" x:Class="KUHybridQuizApp.KUHybridQuizAppPage">
+    <StackLayout Spacing="30" Padding="30" VerticalOptions="Center">
+        <Image Source="ku_logo.png" HeightRequest="50"/>
+        <Frame x:Name="FrameSignUp" IsVisible="false" BackgroundColor="Transparent" HasShadow="true" OutlineColor="#0051ba" Margin="20,20,20,20" >
+            <StackLayout Spacing="10" VerticalOptions="CenterAndExpand">
+                <Entry x:Name="SignUpUsername" Placeholder="Username" />
+                <Entry x:Name="SignUpPassword" Placeholder="Password" IsPassword="true" />
+                <Entry x:Name="SignUpConfirmPassword" Placeholder="Confirm Password" IsPassword="true" />
+                <Entry x:Name="SignUpKUID" Placeholder="KU ID" Keyboard="Numeric"/>
+                <Label x:Name="lblInvalidSignUp" IsVisible="false" Text="Error: Each Field Is Required" TextColor="Red" XAlign="Center" />
+                <Label x:Name="lblPasswordMatch" IsVisible="false" Text="Error: Passwords Do Not Match" TextColor="Red" XAlign="Center" />
+                <Button Text="Sign Up" Clicked="SignUp" TextColor="White" BackgroundColor="#0051ba"/>
+            </StackLayout>
+        </Frame>
+        <Frame x:Name="FrameLogin" IsVisible="false" BackgroundColor="Transparent" HasShadow="true" OutlineColor="#0051ba" Margin="20,20,20,20" >
+            <StackLayout Spacing="10" VerticalOptions="CenterAndExpand">
+                <Entry x:Name="LoginUsername" Placeholder="Username" />
+                <Entry x:Name="LoginPassword" Placeholder="Password" IsPassword="true" />
+                <Label x:Name="lblInvalidLogin" IsVisible="false" Text="Error: Invalid Login" TextColor="Red" XAlign="Center" />
+                <Button Text="Login" Clicked="Login" TextColor="White" BackgroundColor="#0051ba"/>
+            </StackLayout>
+        </Frame>
+        <Button x:Name="btnSignUp" Text="Sign Up" Clicked="SignUp" TextColor="White" BackgroundColor="#0051ba"/>
+        <Button x:Name="btnLogin" Text="Login" Clicked="Login" TextColor="White" BackgroundColor="#0051ba"/>
+        <Label x:Name="lblErrorOccured" IsVisible="false" Text="Error: Internal error occured. Please try again." TextColor="Red" HorizontalTextAlignment="Center" />
+        <Label Text="KU Hybrid Quiz Application" HorizontalTextAlignment="Center" TextColor="Gray" />
+    </StackLayout>
+</ContentPage>

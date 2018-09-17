@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>KU Hybrid Quiz App - Quiz Contents</title>
+
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/angular_material/1.0.0/angular-material.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-animate.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-aria.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-messages.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angular_material/1.0.0/angular-material.min.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.25/angular-route.js"></script>
+    <script type="text/javascript" src="controllers.js"></script>
+</head>
+
+<style>
+    .striped {
+        background-color: lightgrey;
+    }
+</style>
+<body ng-app="myApp" ng-controller="QuizContentsCtrl">
+
+<md-toolbar class="md-hue-2">
+    <div class="md-toolbar-tools" layout="row" layout-align="space-between">
+        <h2 class="md-flex">KU Hybrid Quiz App</h2>
+
+        <div layout="row" layout-align="end">
+            <md-button class="md-raised" ng-click="navQuizzes()">
+                Quizzes
+            </md-button>
+
+            <md-button class="md-raised" ng-click="navCourses()">
+                Courses
+            </md-button>
+
+            <md-button class="md-raised" ng-click="logout()">
+                Logout
+            </md-button>
+        </div>
+    </div>
+</md-toolbar>
+
+<md-card style="max-height:100%;overflow: scroll">
+    <md-card-title>
+        <h2>{{ global.instructor[0].username }} - {{ global.courses[global.currentCourseIndex].title }}: {{ global.quizzes[global.currentQuizIndex].title }}</h2>
+    </md-card-title>
+
+    <md-card-content>
+        <md-tabs md-dynamic-height md-border-bottom>
+            <md-tab label="Questions">
+                <md-content class="md-padding">
+                    <div align="center">
+                        <md-button class="md-primary" ng-click=toggleActive()>
+                            Quiz is currently {{ global.quizzes[global.currentQuizIndex].isVisible }}
+                        </md-button>
+                    </div>
+                    <md-list class="md-flex">
+                        <md-list-item class="md-2-line" ng-repeat="question in global.questions" ng-click="null">
+                            <div layout="row" style="width: 75%">
+                                <div class="md-list-item-text" layout="column">
+                                    <h3>{{ $index + 1 }} | Type: {{ question.type }}</h3>
+                                    <p>{{ question.questionText }}</p>
+                                    <p style="visibility: hidden" name="hiddenQuestionId" value="{{ question.id }}">{{ question.id }}</p>
+                                </div>
+                                <span>
+                                <md-button class="md-secondary" ng-click="showAskDeleteQuestionDialog($index, $event)">
+                                    Delete
+                                </md-button>
+                            </span>
+                            </div>
+                        </md-list-item>
+                    </md-list>
+                    <div align="center">
+                        <md-button class="md-raised md-primary" ng-click="showAddTFQuestionDialog($event)">
+                            Add True/False Question
+                        </md-button>
+                        <md-button class="md-raised md-primary" ng-click="showAddMultipleChoiceDialog($event)">
+                            Add Multiple Choice Question
+                        </md-button>
+                        <md-button class="md-raised md-primary" ng-click="showAddShortAnswerDialog($event)">
+                            Add Short Answer Question
+                        </md-button>
+                    </div>
+                </md-content>
+            </md-tab>
+            <md-tab label="Results">
+                <md-content class="md-padding">
+                    <table style="width: 100%;padding: 2%" >
+                        <tr>
+                            <td align="right">
+                                <md-button class="md-primary" ng-click="exportResults()">
+                                    Export
+                                </md-button>
+                            </td>
+                        </tr>
+                    </table>
+
+                    <table style="width: 100%">
+                        <tr>
+                            <th width="33.33%">
+                                Student ID
+                            </th>
+                            <th width="33.33%">
+                                Score
+                            </th>
+                            <th width="33.33%">
+                                Grade
+                            </th>
+                        </tr>
+                        <tr ng-repeat="result in global.results" ng-class-even="'striped'">
+                            <td align="center" width="33.33%">{{ result.kuID }}</td>
+                            <td align="center" width="33.33%">{{ result.correct }} out of {{ result.total }}</td>
+                            <td align="center" width="33.33%">{{ (result.correct / result.total  | number:2) * 100}}%</td>
+                        </tr>
+                    </table>
+                </md-content>
+            </md-tab>
+            <md-tab label="Statistics">
+                <md-content class="md-padding">
+                    <div layout="row" layout-align="space-around">
+                        <h3>
+                            Mean: {{ (global.mean | number:2) * 100 }}%
+                        </h3>
+                        <h3>
+                            Median: {{ (global.median | number:2) * 100 }}%
+                        </h3>
+                    </div>
+
+                    <hr style="width: 75%; align: center">
+
+                    <table style="width: 100%; padding: 2%">
+                        <tr>
+                            <th>
+                                Question
+                            </th>
+                            <th>
+                                Mean
+                            </th>
+                            <th>
+                                Median
+                            </th>
+                            <td>
+
+                            </td>
+                            <td>
+
+                            </td>
+                            <td>
+
+                            </td>
+                        </tr>
+                    </table>
+                </md-content>
+            </md-tab>
+        </md-tabs>
+    </md-card-content>
+</md-card>
+
+</body>
+</html>

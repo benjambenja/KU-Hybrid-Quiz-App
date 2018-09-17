@@ -1,0 +1,293 @@
+{
+  "course": [
+    {
+      "title": "Programming II",
+      "department": "EECS",
+      "number": "268",
+      "semester": "Fall",
+      "year": "2017",
+      "courseId": 8375882300128573,
+      "instructorId": 9375012946385700,
+      "id": "0"
+    },
+    {
+      "title": "Honors Calculus III",
+      "department": "MATH",
+      "number": "147",
+      "semester": "Fall",
+      "year": "2017",
+      "courseId": 1199347583991002,
+      "instructorId": 3192537584458293,
+      "id": "1"
+    }
+  ],
+  "quiz": [
+    {
+      "title": "Shortest Paths",
+      "courseId": 8375882300128573,
+      "dateCreated": "2017-07-12",
+      "instructions": "Each question carries 10 points.",
+      "isVisible": "ACTIVE",
+      "instructorId": 9375012946385700,
+      "quizId": 6574228398782354,
+      "id": "0"
+    },
+    {
+      "title": "Math quiz!",
+      "courseId": 1199347583991002,
+      "dateCreated": "7/21/2017",
+      "instructions": "Take the quiz. Worth 10 points.",
+      "isVisible": "ACTIVE",
+      "quizId": 5392840128475564,
+      "instructorId": 3192537584458293,
+      "id": 1
+    }
+  ],
+  "question": [
+    {
+      "type": "Multiple",
+      "quizId": 6574228398782354,
+      "courseId": 8375882300128573,
+      "questionText": "Best pet?",
+      "isTF": "false",
+      "isMultiple": "true",
+      "option1": "Dog",
+      "option2": "Cat",
+      "option3": "Bird",
+      "option4": "Snake",
+      "answer": "option2",
+      "instructorId": 9375012946385700,
+      "id": 0
+    },
+    {
+      "type": "TF",
+      "quizId": 6574228398782354,
+      "courseId": 8375882300128573,
+      "questionText": "Is this a quiz?",
+      "isTF": "true",
+      "isMultiple": "false",
+      "answer": true,
+      "instructorId": 9375012946385700,
+      "id": 1
+    },
+    {
+      "type": "TF",
+      "quizId": 5392840128475564,
+      "courseId": 1199347583991002,
+      "questionText": "This is a math quiz.",
+      "isTF": "true",
+      "isMultiple": "false",
+      "answer": true,
+      "instructorId": 3192537584458293,
+      "id": 2
+    },
+    {
+      "type": "TF",
+      "quizId": 6574228398782354,
+      "courseId": 8375882300128573,
+      "questionText": "Is it Friday?",
+      "isTF": "true",
+      "isMultiple": "false",
+      "answer": false,
+      "instructorId": 9375012946385700,
+      "id": 3
+    },
+    {
+      "type": "ShortAnswer",
+      "quizId": "6574228398782354",
+      "courseId": "8375882300128573",
+      "questionText": "First program?",
+      "instructorId": 9375012946385700,
+      "questionId": "8677588785711483",
+      "answerType": "text",
+      "answer": "Hello, World!",
+      "id": 4
+    },
+    {
+      "type": "ShortAnswer",
+      "quizId": "6574228398782354",
+      "courseId": "8375882300128573",
+      "questionText": "5 + 5 = ?",
+      "instructorId": 9375012946385700,
+      "questionId": "3337271394552397",
+      "answerType": "number",
+      "rangeLower": 8,
+      "rangeUpper": 13,
+      "id": 5
+    }
+  ],
+  "submission": [
+    {
+      "kuID": "3928475",
+      "questionId": 7483944203127455,
+      "quizId": 6574228398782354,
+      "courseId": 8375882300128573,
+      "instructorId": 9375012946385700,
+      "answer": "option2",
+      "correct": "YES",
+      "id": "0"
+    },
+    {
+      "kuID": "3928475",
+      "questionId": 3121667436793188,
+      "quizId": 6574228398782354,
+      "courseId": 8375882300128573,
+      "instructorId": 9375012946385700,
+      "answer": "true",
+      "correct": "YES",
+      "id": "1"
+    },
+    {
+      "kuID": "3928475",
+      "questionId": 4842699754785374,
+      "quizId": 6574228398782354,
+      "courseId": 8375882300128573,
+      "instructorId": 9375012946385700,
+      "answer": "true",
+      "correct": "NO",
+      "id": "2"
+    },
+    {
+      "kuID": "2294843",
+      "questionId": 7483944203127455,
+      "quizId": 6574228398782354,
+      "courseId": 8375882300128573,
+      "instructorId": 9375012946385700,
+      "answer": "option1",
+      "correct": "NO",
+      "id": "3"
+    },
+    {
+      "kuID": "2294843",
+      "questionId": 3121667436793188,
+      "quizId": 6574228398782354,
+      "courseId": 8375882300128573,
+      "instructorId": 9375012946385700,
+      "answer": "false",
+      "correct": "NO",
+      "id": "4"
+    },
+    {
+      "kuID": "2294843",
+      "questionId": 4842699754785374,
+      "quizId": 6574228398782354,
+      "courseId": 8375882300128573,
+      "instructorId": 9375012946385700,
+      "answer": "false",
+      "correct": "YES",
+      "id": "5"
+    },
+    {
+      "kuID": "2853772",
+      "quizId": "6574228398782354",
+      "courseId": "8375882300128573",
+      "instructorId": "9375012946385700",
+      "answer": "Hello, World!",
+      "correct": "YES",
+      "id": "6"
+    },
+    {
+      "kuID": "2853772",
+      "quizId": "6574228398782354",
+      "courseId": "8375882300128573",
+      "instructorId": "9375012946385700",
+      "answer": "option2",
+      "correct": "YES",
+      "id": "7"
+    },
+    {
+      "kuID": "2853772",
+      "quizId": "6574228398782354",
+      "courseId": "8375882300128573",
+      "instructorId": "9375012946385700",
+      "answer": "false",
+      "correct": "YES",
+      "id": "8"
+    },
+    {
+      "kuID": "2853772",
+      "quizId": "6574228398782354",
+      "courseId": "8375882300128573",
+      "instructorId": "9375012946385700",
+      "answer": "2",
+      "correct": "NO",
+      "id": "9"
+    },
+    {
+      "kuID": "2853772",
+      "quizId": "6574228398782354",
+      "courseId": "8375882300128573",
+      "instructorId": "9375012946385700",
+      "answer": "true",
+      "correct": "YES",
+      "id": "10"
+    }
+  ],
+  "instructor": [
+    {
+      "username": "admin",
+      "password": "password",
+      "kuID": "1234",
+      "instructorId": 9375012946385700,
+      "id": 0
+    },
+    {
+      "username": "ins",
+      "password": "testing",
+      "kuID": "5678",
+      "instructorId": 3192537584458293,
+      "id": 1
+    }
+  ],
+  "roster": [
+    {
+      "kuID": "2853771",
+      "firstName": "John",
+      "lastName": "Doe",
+      "courseId": 8375882300128573,
+      "id": 1
+    },
+    {
+      "kuID": "3928475",
+      "firstName": "Donald",
+      "lastName": "White",
+      "courseId": 8375882300128573,
+      "id": 2
+    },
+    {
+      "kuID": "2294843",
+      "firstName": "Bob",
+      "lastName": "Smith",
+      "courseId": 8375882300128573,
+      "id": 3
+    },
+    {
+      "kuID": "2853772",
+      "firstName": "Benjamin",
+      "lastName": "Streit",
+      "courseId": 8375882300128573,
+      "id": 4
+    }
+  ],
+  "student": [
+    {
+      "username": "bstreit",
+      "password": "testing",
+      "kUID": "2853772",
+      "section": [
+        "1234",
+        "5678"
+      ],
+      "id": "1"
+    },
+    {
+      "username": "student",
+      "password": "password",
+      "kUID": "1234567",
+      "section": [
+        "1234"
+      ],
+      "id": "2"
+    }
+  ]
+}

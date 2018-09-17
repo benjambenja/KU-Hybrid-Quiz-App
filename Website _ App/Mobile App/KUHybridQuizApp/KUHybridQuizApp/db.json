@@ -1,0 +1,63 @@
+﻿﻿[
+  {
+    "Course": [
+      {
+        "Name": "Programming I",
+        "Number": "168",
+        "Department": "EECS",
+        "Semester": "Spring",
+        "Year": 2017,
+        "ProfId": "1",
+        "Id": "1"
+      },
+      {
+        "Name": "Programming II",
+        "Number": "268",
+        "Department": "EECS",
+        "Semester": "Fall",
+        "Year": 2017,
+        "ProfId": "1",
+        "Id": "2"
+      }
+    ],
+    "Quiz": [
+      {
+        "Title": "Shortest Paths",
+        "CourseId": "2",
+        "DateCreated": "2017-07-12",
+        "Instructions": "Each question carries 10 points.",
+        "Id": "1"
+      }
+    ],
+    "Question": [
+      {
+        "QuizId": "1",
+        "Type": "TF",
+        "QuestionText": "In a weighted graph, assume that the shortest path from a source 's' to a destination 't' is correctly calculated using a shortest path algorithm. Is the following statement true? If we increase weight of every edge by 1, the shortest path always remains same.",
+        "Answer": "False",
+        "Id": "1"
+      },
+      {
+        "QuizId": "1",
+        "Type": "Multiple",
+        "QuestionText": "In an unweighted, undirected connected graph, the shortest path from a node S to every other node is computed most efficiently, in terms of time complexity by?",
+        "Answer": "4",
+        "Option1": "Dijkstra’s algorithm starting from S",
+        "Option2": "Warshall’s algorithm",
+        "Option3": "Performing a DFS starting from S",
+        "Option4": "Performing a BFS starting from S",
+        "Id": "2"
+      }
+    ],
+    "Submission": [
+      {
+        "StudentName": "TestingName",
+        "KUID": "TestingKUID",
+        "CourseId": "TestingCourseId",
+        "QuizId": "TestingQuizId",
+        "QuestionId": "TestingQuestionId",
+        "Choice": "TestingChoice"
+      }
+    ]
+  }
+]

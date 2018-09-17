@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>KU Hybrid Quiz App</title>
+
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/angular_material/1.0.0/angular-material.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-animate.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-aria.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-messages.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angular_material/1.0.0/angular-material.min.js"></script>
+    <script type="text/javascript" src="controllers.js"></script>
+</head>
+
+<body ng-app="myApp" ng-cloak>
+
+<md-toolbar class="md-hue-2">
+    <div class="md-toolbar-tools">
+        <h2 class="md-flex">KU Hybrid Quiz App</h2>
+    </div>
+</md-toolbar>
+
+<md-content>
+    <table align="center" width="80%" cellpadding="20">
+        <tr>
+            <td>
+                <div ng-controller="SignUpCtrl">
+                    <md-card style="width: 100%">
+                        <md-card-content>
+                            <md-card-title>
+                                <md-card-title-text>
+                                    <div align="center">
+                                        <span class="md-headline">New Users</span>
+                                    </div>
+                                </md-card-title-text>
+                            </md-card-title>
+                            <div>
+                                <md-input-container class="md-block">
+                                    <label>Username</label>
+                                    <input type="text" ng-model="signUpUsername" required>
+                                </md-input-container>
+                            </div>
+                            <div>
+                                <md-input-container class="md-block">
+                                    <label>Password</label>
+                                    <input type="password" ng-model="signUpPassword" required>
+                                </md-input-container>
+                            </div>
+                            <div>
+                                <md-input-container class="md-block">
+                                    <label>Confirm Password</label>
+                                    <input type="password" ng-model="confirmPassword" required>
+                                </md-input-container>
+                            </div>
+                            <div>
+                                <md-input-container class="md-block">
+                                    <label>KU ID</label>
+                                    <input ng-model="signUpKuId" required>
+                                </md-input-container>
+                            </div>
+                            <div align="center">
+                                <md-card-action>
+                                    <md-button class="md-raised md-primary" ng-click="submitSignUp($event)" style="width: 50%">Sign Up</md-button>
+                                </md-card-action>
+                            </div>
+                        </md-card-content>
+                    </md-card>
+                </div>
+            </td>
+            <td>
+                <div ng-controller="LoginCtrl">
+                    <md-card style="width: 100%">
+                        <md-card-content>
+                            <md-card-title>
+                                <md-card-title-text>
+                                    <div align="center">
+                                        <span class="md-headline">Existing Users</span>
+                                    </div>
+                                </md-card-title-text>
+                            </md-card-title>
+                            <div>
+                                <md-input-container class="md-block">
+                                    <label>Username</label>
+                                    <input ng-model="loginUsername" required>
+                                </md-input-container>
+                            </div>
+                            <div>
+                                <md-input-container class="md-block">
+                                    <label>Password</label>
+                                    <input type="password" ng-model="loginPassword" required>
+                                </md-input-container>
+                            </div>
+                            <div align="center">
+                                <md-card-action>
+                                    <md-button ng-click="submitLogin($event)" class="md-raised md-primary" style="width: 50%">Login</md-button>
+                                </md-card-action>
+                            </div>
+                        </md-card-content>
+                    </md-card>
+                </div>
+            </td>
+        </tr>
+    </table>
+</md-content>
+
+</body>
+</html>

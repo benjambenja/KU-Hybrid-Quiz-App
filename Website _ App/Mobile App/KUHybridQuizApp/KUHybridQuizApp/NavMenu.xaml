@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="KUHybridQuizApp.NavMenu" Title="Navigation Menu" WidthRequest="25">
+	<StackLayout Padding="30,30,30,0" Spacing="10" VerticalOptions="Start">
+        <Label Text="Navigation Menu" XAlign="Center" FontSize="18" />
+        <Button x:Name="buttonCourses" ClassId="buttonCourses" Clicked="Navigate" Text="Courses" BackgroundColor="#0051ba" TextColor="White" />
+        <Button x:Name="buttonAnnouncements" Clicked="Navigate" Text="Announcements" BackgroundColor="#0051ba" TextColor="White" />
+        <Button x:Name="buttonContact" Clicked="Navigate" Text="Contact" BackgroundColor="#0051ba" TextColor="White" />
+        <Button x:Name="buttonLogout" Clicked="Navigate" Text="Logout" BackgroundColor="#0051ba" TextColor="White" />
+    </StackLayout>
+</ContentPage>

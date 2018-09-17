@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="KUHybridQuizApp.Home">
+    <StackLayout VerticalOptions="StartAndExpand" >
+        <ListView x:Name="courseList" ItemSelected="OnItemSelect" VerticalOptions="StartAndExpand" HasUnevenRows="true" RowHeight="150">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <Frame BackgroundColor="#0051ba" HasShadow="true" OutlineColor="Transparent" Margin="20,20,20,20" >
+                            <Grid  RowSpacing="10" ColumnSpacing="3">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                        </Grid.RowDefinitions>
+                            <Label x:Name="courseName" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="4" Text="{ Binding title }" XAlign="Center" FontSize="26" TextColor="White" />
+                            <Label Grid.Row="1" Grid.Column="0" XAlign="End" Text="{ Binding department }" TextColor="White" />
+                            <Label Grid.Row="1" Grid.Column="1" XAlign="Start" Text="{ Binding number }" TextColor="White" />
+                            <Label Grid.Row="1" Grid.Column="2" XAlign="End" Text="{ Binding semester }" TextColor="White" />
+                            <Label Grid.Row="1" Grid.Column="3" XAlign="Start" Text="{ Binding year }" TextColor="White" />
+                        </Grid>
+                        </Frame>
+                    </ViewCell>    
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </StackLayout>
+</ContentPage>

@@ -1,0 +1,6 @@
+{
+  "/api/": "/",
+  "/blog/:resource/:id/show": "/:resource/:id",
+  "/blog/:resource/:courseId/show": "/:resource/:courseId",
+  "/blog/:category": "/posts?category=:category"
+}

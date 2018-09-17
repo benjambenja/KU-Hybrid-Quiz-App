@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>KU Hybrid Quiz App - Add Multiple Choice Question</title>
+
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/angular_material/1.0.0/angular-material.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-animate.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-aria.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-messages.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angular_material/1.0.0/angular-material.min.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.25/angular-route.js"></script>
+    <script type="text/javascript" src="controllers.js"></script>
+</head>
+<body ng-app="myApp">
+
+<md-dialog>
+    <md-toolbar>
+        <div class="md-toolbar-tools">
+            <h2>Add Multiple Choice Question</h2>
+        </div>
+    </md-toolbar>
+    <md-dialog-content style="min-width:600px;min-height:600px;">
+        <div layout="column" style="width: 100%;padding: 2%">
+            <md-input-container>
+                <label>Question Text</label>
+                <textarea ng-model="questionText"></textarea>
+            </md-input-container>
+            <md-content class="md-no-momentum">
+                <md-input-container md-no-float class="md-block" style="width: 100%">
+                    <label>Option One</label>
+                    <input type="text" ng-model="option1">
+                </md-input-container>
+
+                <md-input-container class="md-block" style="width: 100%">
+                    <label>Option Two</label>
+                    <input type="text" ng-model="option2">
+                </md-input-container>
+
+                <md-input-container md-no-float class="md-block" style="width: 100%">
+                    <label>Option Three</label>
+                    <input type="text" ng-model="option3">
+                </md-input-container>
+
+                <md-input-container md-no-float class="md-block" style="width: 100%">
+                    <label>Option Four</label>
+                    <input type="text" ng-model="option4">
+                </md-input-container>
+            </md-content>
+
+            <div align="center" style="width: 100%">
+                <md-radio-group layout="row" ng-model="answer">
+                    <md-radio-button value="option1">
+                        Option One
+                    </md-radio-button>
+                    <md-radio-button value="option2">
+                        Option Two
+                    </md-radio-button>
+                    <md-radio-button value="option3">
+                        Option Three
+                    </md-radio-button>
+                    <md-radio-button value="option4">
+                        Option Four
+                    </md-radio-button>
+                </md-radio-group>
+            </div>
+
+            <table style="width: 100%">
+                <tr>
+                    <td width="50%" align="right">
+                        <md-button class="md-raised md-warn" ng-click="cancel()">Cancel</md-button>
+                    </td>
+                    <td width="50%" align="left">
+                        <md-button class="md-raised md-primary" ng-click="submit()">Save</md-button>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </md-dialog-content>
+</md-dialog>
+
+</body>
+</html>

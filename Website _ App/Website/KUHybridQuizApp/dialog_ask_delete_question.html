@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>KU Hybrid Quiz App - Delete Question</title>
+
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/angular_material/1.0.0/angular-material.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-animate.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-aria.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-messages.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angular_material/1.0.0/angular-material.min.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.25/angular-route.js"></script>
+    <script type="text/javascript" src="controllers.js"></script>
+</head>
+<body ng-app="myApp">
+
+<md-dialog>
+    <md-toolbar>
+        <div class="md-toolbar-tools">
+            <h2>Are you sure you want to delete this question from {{ global.quizzes[global.currentQuizIndex].title }}?</h2>
+        </div>
+    </md-toolbar>
+    <md-dialog-content style="max-height:100px;">
+        <table style="vertical-align: middle;width: 100%">
+            <tr>
+                <td>
+                    <table style="width: 100%">
+                        <tr>
+                            <td align="right">
+                                <md-button class="md-raised md-primary" ng-click="cancel()">No</md-button>
+                            </td>
+                            <td align="left">
+                                <md-button class="md-raised" ng-click="deleteQuestion($index)">Yes</md-button>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+    </md-dialog-content>
+</md-dialog>
+
+</body>
+</html>

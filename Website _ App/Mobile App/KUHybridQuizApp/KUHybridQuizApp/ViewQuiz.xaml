@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage 
+    xmlns="http://xamarin.com/schemas/2014/forms" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+    x:Class="KUHybridQuizApp.ViewQuiz" 
+    xmlns:local="clr-namespace:KUHybridQuizApp; assembly:KUHybridQuizApp">
+    <ContentPage.Content>
+        <StackLayout VerticalOptions="CenterAndExpand" >
+            <Label XAlign="Center" FontSize="18">
+                True/False Questions
+            </Label>
+            
+            <ListView x:Name="TFQuestionList" VerticalOptions="StartAndExpand" HasUnevenRows="true">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <Grid x:Name="TF" RowSpacing="10">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto" />
+                                <RowDefinition Height="Auto" />
+                                <RowDefinition Height="Auto" />
+                            </Grid.RowDefinitions>
+                            <Label x:Name="lblQuestionTextTF" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" Text="{ Binding questionText }" />
+                            <Picker SelectedIndexChanged="TFPicker_SelectedIndexChanged" ClassId="{ Binding questionText }" Grid.Row="1" Grid.Column="0" ItemsSource="{ Binding optionList }" Title="Select an answer"></Picker>
+                        </Grid>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+
+            <Label XAlign="Center" FontSize="18">
+                Multiple Choice Questions
+            </Label>
+            
+            <ListView x:Name="MultipleQuestionList" VerticalOptions="StartAndExpand" HasUnevenRows="true">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <Grid x:Name="Multiple" RowSpacing="10">
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="Auto" />
+                                    <RowDefinition Height="Auto" />
+                                    <RowDefinition Height="Auto" />
+                                </Grid.RowDefinitions>
+                                <Label x:Name="lblQuestionTextMultiple" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" Text="{ Binding questionText }" />
+                                <Picker SelectedIndexChanged="MultiplePickerChanged_SelectedIndexChanged" ClassId="{ Binding questionText }" Grid.Row="1" Grid.Column="0" ItemsSource="{ Binding optionList }" Title="Select an answer"></Picker>
+                            </Grid>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+
+            <Label XAlign="Center" FontSize="18">
+                Short Answer Questions
+            </Label>
+            
+            <ListView x:Name="ShortAnswerQuestionList" VerticalOptions="StartAndExpand" HasUnevenRows="true">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <Grid x:Name="ShortAnswer" RowSpacing="10">
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="Auto" />
+                                    <RowDefinition Height="Auto" />
+                                    <RowDefinition Height="Auto" />
+                                </Grid.RowDefinitions>
+                                <Label x:Name="lblQuestionTextShortAnswer" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" Text="{ Binding questionText }" />
+                                <Entry ClassId="{ Binding questionText }" TextChanged="Entry_TextChanged"  Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2" Placeholder="Enter answer..." />
+                            </Grid>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+
+            <Button Text="Submit" Clicked="SubmitQuiz" TextColor="White" BackgroundColor="#0051ba"></Button>
+        </StackLayout>
+	</ContentPage.Content>
+</ContentPage>

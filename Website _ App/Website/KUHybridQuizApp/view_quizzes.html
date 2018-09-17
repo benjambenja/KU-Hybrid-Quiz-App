@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>KU Hybrid Quiz App - Quizzes</title>
+
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/angular_material/1.0.0/angular-material.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-animate.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-aria.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-messages.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angular_material/1.0.0/angular-material.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.js"></script>
+    <script type="text/javascript" src="controllers.js"></script>
+
+</head>
+<body ng-app="myApp" ng-controller="QuizCtrl" ng-cloak>
+
+<md-toolbar class="md-hue-2">
+    <div class="md-toolbar-tools" layout="row" layout-align="space-between">
+        <h2 class="md-flex">KU Hybrid Quiz App</h2>
+
+        <div layout="row" layout-align="end">
+            <md-button class="md-raised" ng-click="navCourses()">
+                Courses
+            </md-button>
+
+            <md-button class="md-raised" ng-click="logout()">
+                Logout
+            </md-button>
+        </div>
+    </div>
+</md-toolbar>
+
+<md-card>
+    <md-card-title>
+        <h2>{{ global.instructor[0].username }} - {{ global.courses[global.currentCourseIndex].title }}: Quizzes & Students</h2>
+    </md-card-title>
+
+    <md-card-content>
+        <md-tabs md-dynamic-height md-border-bottom>
+            <md-tab label="Quizzes">
+                <md-list class="md-flex">
+                    <md-list-item class="md-2-line" ng-repeat="quiz in global.quizzes" ng-click="quizClicked($index)">
+                        <div class="md-list-item-text" layout="column">
+                            <h3>{{ quiz.title }}</h3>
+                            <p>{{ quiz.dateCreated }}</p>
+                        </div>
+                        <!--<md-checkbox class="md-secondary" ng-checked="{{ quiz.isVisible }}" ng-click="null">Active: {{ quiz.isVisible }}</md-checkbox>-->
+                        <span>
+                            <md-button class="md-secondary" ng-click="showAskDeleteQuizDialog($index, $event)">
+                                Delete
+                            </md-button>
+                        </span>
+                    </md-list-item>
+                </md-list>
+                <div align="center">
+                    <md-button class="md-raised md-primary" ng-click="showAddQuizDialog($event)">
+                        Add Quiz
+                    </md-button>
+                </div>
+            </md-tab>
+
+            <md-tab label="Students">
+                <table style="width: 100%;padding: 2%" >
+                    <tr>
+                        <td align="right">
+                            <input type="file" id="fileInput" onchange="angular.element(this).scope().fileChanged()"/>
+                        </td>
+                    </tr>
+                </table>
+
+                <table style="width: 100%">
+                <tr>
+                    <th width="33.33%">
+                        KU ID
+                    </th>
+                    <th width="33.33%">
+                        Last Name
+                    </th>
+                    <th width="33.33%">
+                        First Name
+                    </th>
+                </tr>
+                <tr ng-repeat="student in global.roster track by $index" ng-class-even="'striped'">
+                    <td align="center" width="33.33%">{{ student.kuID }}</td>
+                    <td align="center" width="33.33%">{{ student.lastName }}</td>
+                    <td align="center" width="33.33%">{{ student.firstName }}</td>
+                </tr>
+                </table>
+            </md-tab>
+        </md-tabs>
+    </md-card-content>
+</md-card>
+
+</body>
+</html>

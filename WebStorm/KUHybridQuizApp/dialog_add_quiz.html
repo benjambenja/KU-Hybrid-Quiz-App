@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>KU Hybrid Quiz App - Add Quiz</title>
+
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/angular_material/1.0.0/angular-material.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-animate.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-aria.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-messages.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angular_material/1.0.0/angular-material.min.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.25/angular-route.js"></script>
+    <script type="text/javascript" src="controllers.js"></script>
+</head>
+<body ng-app="myApp">
+
+<md-dialog>
+    <md-toolbar>
+        <div class="md-toolbar-tools">
+            <h2>Add Quiz</h2>
+        </div>
+    </md-toolbar>
+    <md-dialog-content style="min-width:600px;min-height:300px;">
+        <div layout="column" style="width: 100%;padding: 2%">
+            <md-input-container md-no-float class="md-block" style="width: 100%">
+                <label>Quiz Title</label>
+                <input type="text" ng-model="quizTitle">
+            </md-input-container>
+
+            <md-input-container md-no-float class="md-block">
+                <label>Quiz Instructions</label>
+                <input type="text" ng-model="instructions">
+            </md-input-container>
+
+            <md-radio-group layout="row" ng-model="isVisible">
+                <label style="padding-right: 2%">
+                    Is active: 
+                </label>
+                <md-radio-button value="ACTIVE">
+                    True
+                </md-radio-button>
+                <md-radio-button value="INACTIVE">
+                    False
+                </md-radio-button>
+            </md-radio-group>
+
+            <table style="position: absolute; bottom: 0%;width: 100%">
+                <tr>
+                    <td width="50%" align="right">
+                        <md-button class="md-raised md-warn" ng-click="cancel()">Cancel</md-button>
+                    </td>
+                    <td width="50%" align="left">
+                        <md-button class="md-raised md-primary" ng-click="submit()">Save</md-button>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </md-dialog-content>
+</md-dialog>
+
+</body>
+</html>

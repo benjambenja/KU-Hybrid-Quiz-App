@@ -1,0 +1,20 @@
+﻿<Properties StartupConfiguration="{39AB090E-704B-4319-A8C5-ED0603BAAB43}|Default">
+  <MonoDevelop.Ide.Workbench ActiveDocument="KUHybridQuizApp/ViewQuiz.xaml">
+    <Files>
+      <File FileName="KUHybridQuizApp/KUHybridQuizAppPage.xaml.cs" Line="127" Column="43" />
+      <File FileName="KUHybridQuizApp/Home.xaml.cs" Line="20" Column="58" />
+      <File FileName="KUHybridQuizApp/ViewCourse.xaml.cs" Line="58" Column="88" />
+      <File FileName="KUHybridQuizApp/ViewQuiz.xaml.cs" Line="78" Column="23" />
+      <File FileName="KUHybridQuizApp/ViewQuiz.xaml" Line="79" Column="1" />
+      <File FileName="KUHybridQuizApp/info.cs" Line="14" Column="44" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Release" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.ItemProperties.KUHybridQuizApp.iOS PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.7C0AC463-76EA-4688-88F4-545B301B3594" />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.ItemProperties.KUHybridQuizApp.Droid PreferredExecutionTarget="Android.9887bc314f44484335" />
+  <MultiItemStartupConfigurations />
+</Properties>

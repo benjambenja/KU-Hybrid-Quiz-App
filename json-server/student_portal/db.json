@@ -1,0 +1,188 @@
+{
+  "Course": [
+    {
+      "Name": "Programming I",
+      "Number": "168",
+      "Department": "EECS",
+      "Semester": "Spring",
+      "Year": "2017",
+      "Section": "1234",
+      "ProfId": "1",
+      "Id": "1"
+    },
+    {
+      "Name": "Programming II",
+      "Number": "268",
+      "Department": "EECS",
+      "Semester": "Fall",
+      "Year": "2017",
+      "Section": "5678",
+      "ProfId": "1",
+      "Id": "2"
+    }
+  ],
+  "Quiz": [
+    {
+      "Title": "Shortest Paths",
+      "CourseId": "2",
+      "SectionId": "5678",
+      "DateCreated": "2017-07-12",
+      "Instructions": "Each question carries 10 points.",
+      "IsVisible": "true",
+      "Id": "1"
+    }
+  ],
+  "Question": [
+    {
+      "QuizId": "1",
+      "Type": "TF",
+      "QuestionText": "In a weighted graph, assume that the shortest path from a source 's' to a destination 't' is correctly calculated using a shortest path algorithm. Is the following statement true? If we increase weight of every edge by 1, the shortest path always remains same.",
+      "Answer": "False",
+      "Id": "1"
+    },
+    {
+      "QuizId": "1",
+      "Type": "Multiple",
+      "QuestionText": "In an unweighted, undirected connected graph, the shortest path from a node S to every other node is computed most efficiently, in terms of time complexity by?",
+      "Answer": "4",
+      "Option1": "Dijkstra’s algorithm starting from S",
+      "Option2": "Warshall’s algorithm",
+      "Option3": "Performing a DFS starting from S",
+      "Option4": "Performing a BFS starting from S",
+      "Id": "2"
+    }
+  ],
+  "Submission": [
+    {
+      "StudentName": "TestingName",
+      "KUID": "TestingKUID",
+      "CourseId": "TestingCourseId",
+      "QuizId": "TestingQuizId",
+      "QuestionId": "TestingQuestionId",
+      "SectionId": "TestingSectionId",
+      "Choice": "TestingChoice",
+      "id": "1"
+    },
+    {
+      "StudentName": "bstreit",
+      "KUID": "2853772",
+      "CourseId": "2",
+      "QuizId": "1",
+      "QuestionId": "2",
+      "SectionId": "5678",
+      "Choice": "Option4",
+      "id": "3"
+    },
+    {
+      "StudentName": "bstreit",
+      "KUID": "2853772",
+      "CourseId": "2",
+      "QuizId": "1",
+      "QuestionId": "1",
+      "SectionId": "5678",
+      "Choice": "True",
+      "id": "2"
+    },
+    {
+      "StudentName": "bstreit",
+      "KUID": "2853772",
+      "CourseId": "2",
+      "QuizId": "1",
+      "QuestionId": "2",
+      "SectionId": "5678",
+      "Choice": "Option4",
+      "id": "5"
+    },
+    {
+      "StudentName": "bstreit",
+      "KUID": "2853772",
+      "CourseId": "2",
+      "QuizId": "1",
+      "QuestionId": "1",
+      "SectionId": "5678",
+      "Choice": "False",
+      "id": "4"
+    },
+    {
+      "StudentName": "bstreit",
+      "KUID": "2853772",
+      "CourseId": "2",
+      "QuizId": "1",
+      "QuestionId": "2",
+      "SectionId": "5678",
+      "Choice": "Option2",
+      "id": "7"
+    },
+    {
+      "StudentName": "bstreit",
+      "KUID": "2853772",
+      "CourseId": "2",
+      "QuizId": "1",
+      "QuestionId": "1",
+      "SectionId": "5678",
+      "Choice": "False",
+      "id": "6"
+    },
+    {
+      "StudentName": "bstreit",
+      "KUID": "2853772",
+      "CourseId": "2",
+      "QuizId": "1",
+      "QuestionId": "1",
+      "SectionId": "5678",
+      "Choice": "False",
+      "id": "8"
+    },
+    {
+      "StudentName": "bstreit",
+      "KUID": "2853772",
+      "CourseId": "2",
+      "QuizId": "1",
+      "QuestionId": "2",
+      "SectionId": "5678",
+      "Choice": "Option3",
+      "id": "9"
+    },
+    {
+      "StudentName": "bstreit",
+      "KUID": "2853772",
+      "CourseId": "2",
+      "QuizId": "1",
+      "QuestionId": "2",
+      "SectionId": "5678",
+      "Choice": "Option4",
+      "id": "11"
+    },
+    {
+      "StudentName": "bstreit",
+      "KUID": "2853772",
+      "CourseId": "2",
+      "QuizId": "1",
+      "QuestionId": "1",
+      "SectionId": "5678",
+      "Choice": "False",
+      "id": "10"
+    }
+  ],
+  "Student": [
+    {
+      "Username": "bstreit",
+      "Password": "testing",
+      "KUID": "2853772",
+      "Section": [
+        "1234",
+        "5678"
+      ],
+      "id": "1"
+    },
+    {
+      "Username": "student",
+      "Password": "password",
+      "KUID": "1234567",
+      "Section": [
+        "1234"
+      ],
+      "id": "2"
+    }
+  ]
+}
